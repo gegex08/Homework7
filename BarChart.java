@@ -1,13 +1,42 @@
 
 package labhomework7;
-/**
- *
- * @author geneivaocampo
- */
+/****************************************************
+ * Programmer: Geneiva Ocampo
+ * 
+ * Course CSCI 1471
+ * 
+ * Date 03/23/2024
+ * 
+ * Assignment: Homework #7: Barchart 
+ * 
+ * Environment Java with Netbeans
+ * 
+ * Files Included: Barchart & Homework7
+ * 
+ * Purpose: Write a program that displays asterisk for each number 30 different random times, get max and min numbers, calculate average
+ * 
+ * Input: random generated grade and an array of grades
+ * 
+ * Preconditions/ Assumptions: grades range from 1-100
+ * 
+ * Equations:  total / array.length, grade < lowNum, grade > highNum, total += (i * 10) * array[i]
+ * 
+ * Output: Max, Min, Average
+ * 
+ * Postconditions/Assumptions: grades range from 1-100
+ * 
+ * Contraints: Needs to be 30 random grades
+ * 
+ * Algorithm: 
+ * Program will get and display 30 random asterisk to represent grades
+ * program will the get and display method to get Max
+ * program will the get and display method to get Min
+ * program will the get and display method to get Average of all the numbers
+ ****************************************************/
 public class BarChart {
     
       //Random 30 int between 1-100
-      static void outputBarChart(int [] array) {
+      public static void outputBarChart(int [] array) {
       
       // for each array element, output a bar of the chart
       for ( int counter = 0; counter < array.length; counter++ ) 
@@ -28,7 +57,7 @@ public class BarChart {
       } // end of random Barchart method
       
       //get Max Method
-      static int getMaximum(int [] array){
+      public static int getMaximum(int [] array){
         
         // Assume the first element of the array is the largest
         int highNum = array[0];
@@ -41,7 +70,7 @@ public class BarChart {
         return highNum;
       }//end of Max Method
       //get Min Method
-      static int getMinimum(int [] array){
+      public static int getMinimum(int [] array){
         
         // Assume the first element of the array is the largest
         int lowNum = array[0];
@@ -55,20 +84,30 @@ public class BarChart {
       }//end of minMethod
       
       //get Avg Method
-      static double getAverage( int[] array )
+      public static double getAverage( int[] array )
         {      
       int total = 0; // initialize total
  
-      // sum of numbers
-      for ( int num : array )
-          //store the sum in total
-         total += num;
+      // Sum of numbers excluding the last element
+        for (int i = 0; i < array.length - 1; i++) {
+            
+            total += (i * 10) * array[i]; // Multiply the grade by its frequency
+        }
 
-      // return average of grades
-      return (double) total / array.length;
-        } // end method getAverage
-      
-      
-      
+        // Calculate the total number of grades excluding the last category
+        int totalCount = 0;
+
+        //For each number in the array
+        for (int num : array) {
+
+            //add each number to the total Count
+            totalCount += num;
+        }
+
+        // Calculate the average of grades
+        return (double) total / totalCount;
+            } // end method getAverage
+
       
 } // end class BarChart
+

@@ -1,9 +1,41 @@
  package arrayexpansion;
 
-/**
- *
- * @author geneivaocampo
- */
+/****************************************************
+ * Programmer: Geneiva Ocampo
+ * 
+ * Course CSCI 1471
+ * 
+ * Date 03/23/2024
+ * 
+ * Assignment: Homework #7: Array Expansion 
+ * 
+ * Environment Java with Netbeans
+ * 
+ * Files Included: ArrayExpansion
+ * 
+ * Purpose: Display Array, make a copy of the array, expand the array, null the array
+ * 
+ * Input: an Array of 10 numbers
+ * 
+ * Preconditions/ Assumptions: data type int 
+ * 
+ * Equations:   counter-1; i != array.length - 1
+ * 
+ * Output: Array, make a copy of the array, expand the array, null the array
+ * 
+ * Postconditions/Assumptions: data type int 
+ * 
+ * Contraints: Size of Array is 10 numbers
+ * 
+ * Algorithm: 
+ * Input the numbers of the given array or apply 10 hard code integers in place
+ * Display the index starting at value 1-10 and the value that it contains
+ * Display a row of array
+ * Make Copy and Display Original array and copy of Array
+ * Expand and display the array by three and make them all zeros
+ * Get the copy of the array and expand by three and revert the first 10 integers back to its original value
+ * get method to set Array to be null
+s ****************************************************/
 public class ArrayExpansion {
    public static void main( String[] args )
    {
@@ -25,12 +57,12 @@ public class ArrayExpansion {
         
         // Step 2: after step 1, original represents the same 10 integers
         int[] original = array;
-        System.out.println("After (b) step 1 of expansion");
+        System.out.println("\nAfter (b) step 1 of expansion");
         printArray("arr", array);
         printArray("original", original);
 
         // Step 3: arr represents 12 integers, the first 10 of which are copied from original
-        array = new int[12];
+        array = new int[12];//sets all values =0
         System.out.println("\nAfter (c) step 2 of expansion");
         printArray("arr", array);
         printArray("original", original);

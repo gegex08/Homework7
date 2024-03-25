@@ -1,28 +1,55 @@
 
 package initarray;
 
-/**
- *
- * @author geneivaocampo
- */
+/****************************************************
+ * Programmer: Geneiva Ocampo
+ * 
+ * Course CSCI 1471
+ * 
+ * Date 03/23/2024
+ * 
+ * Assignment: Homework #7: InitArray 
+ * 
+ * Environment Java with Netbeans
+ * 
+ * Files Included: InitArray
+ * 
+ * Purpose: Display Array and then Average
+ * 
+ * Input: 2-dimensional Array
+ * 
+ * Preconditions/ Assumptions: data type int 
+ * 
+ * Equations:   total += num; total / count;
+ * 
+ * Output: Array and Average
+ * 
+ * Postconditions/Assumptions: data type int 
+ * 
+ * Contraints: Size of Array
+ * 
+ * Algorithm: 
+ * Input the numbers of the given array or apply hard code integers in place
+ * Call method Display the arrays without barriers
+ * call method to Calculate and display the average
+ ****************************************************/
 public class InitArray {
 
    
    // create and output two-dimensional arrays
    public static void main( String[] args )
    {
-      int[][] array1 = { { 1, 2, 3 }, { 4, 5, 6 } };        
-      int[][] array2 = { { 1, 2 }, { 3 }, { 4, 5, 6 } }; 
+      int[][] array1 = { { 4, 2, 3 }, { 4, 5, 6 } };       
+      int[][] array2 = { { 4, 2 }, { 3 }, { 4, 5, 6 } }; 
 
       System.out.println( "Values in array1 by row are" );
       outputArray( array1 ); // displays array1 by row
-      System.out.println("The average value of array1 is: " + getAverage(array1));
+      System.out.printf("The average value of array1 is: %.1f", getAverage(array1));
 
    
       System.out.println( "\nValues in array2 by row are" );
       outputArray( array2 ); // displays array2 by row
-      System.out.println("The average value of array2 is: " + getAverage(array2));
-
+      System.out.printf("The average value of array2 is: %.1f\n", getAverage(array2));
    } // end main
 
    // output rows and columns of a two-dimensional array
