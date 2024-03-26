@@ -39,17 +39,19 @@ public class BarChart {
       public static void outputBarChart(int [] array) {
       
       // for each array element, output a bar of the chart
+          //numbers startting at 0; as long as they are less than 11; iterate
       for ( int counter = 0; counter < array.length; counter++ ) 
       {
          // output bar label ( "00-09: ", ..., "90-99: ", "100: " )
-         if ( counter == 10 )
-            System.out.printf( "%5d: ", 100 ); 
+         if ( counter == 10 )//if the iteration is at 10
+            System.out.printf( "%5d: ", 100 ); //print 100
          else
-            System.out.printf( "%02d-%02d: ", 
-               counter * 10, counter * 10 + 9  ); 
+             
+            System.out.printf( "%02d-%02d: ", //2 digits - 2 digits(note: if array index only has 1 digit the number will be padded with 0's
+               counter * 10, counter * 10 + 9  ); //multiply the array index *10 for the first digits - then multiply by 10 and ad 9 to the the next 2 digits
  
          // print bar of asterisks
-         for ( int stars = 0; stars < array[ counter ]; stars++ )
+         for ( int stars = 0; stars < array[ counter ]; stars++ )//as long as the stars start at 0; stars are less than 100; continue adding stars
             System.out.print( "*" );
 
          System.out.println(); // start a new line of output
