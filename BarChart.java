@@ -51,7 +51,7 @@ public class BarChart {
                counter * 10, counter * 10 + 9  ); //multiply the array index *10 for the first digits - then multiply by 10 and ad 9 to the the next 2 digits
  
          // print bar of asterisks
-         for ( int stars = 0; stars < array[ counter ]; stars++ )//as long as the stars start at 0; stars are less than 100; continue adding stars
+         for ( int stars = 0; stars < array[ counter ]; stars++ )//as long as the stars start at 0; grades are less than 100; continue adding stars
             System.out.print( "*" );
 
          System.out.println(); // start a new line of output
