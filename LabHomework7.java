@@ -38,15 +38,15 @@ import java.util.Random;
 public class LabHomework7 {
 
     public static void main(String[] args) {
-       int[] array = new int[11];
+       int[] array = new int[11];//array lenght for 11 rows of grade distribution
        System.out.println("Grade distribution:");
-       Random randomNumbers = new Random();
+       Random randomNumbers = new Random();//construct new random class method
       
-      for (int i = 0; i < 30; i++) {
-            ++array[ randomNumbers.nextInt(11) ];
+      for (int i = 0; i < 30; i++) {//for 30 numbers
+            ++array[ randomNumbers.nextInt(11) ]; //distribute among the array
       }
        
-       BarChart.outputBarChart(array);
+       BarChart.outputBarChart(array);//Get the barchart output 
        
        int max = BarChart.getMaximum(array);
        System.out.println("Maximum number: " + max);
